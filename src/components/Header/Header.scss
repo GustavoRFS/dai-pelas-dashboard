@@ -1,0 +1,24 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  background-color: #191c1f;
+
+  z-index: 1000;
+
+  padding: 10px 20px;
+  img {
+    z-index: 1001;
+    height: fit-content;
+  }
+  > div {
+    z-index: 1002;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .logo {
+      border-radius: 30px;
+      background-color: aqua;
+    }
+  }
+}
