@@ -9,11 +9,10 @@ export function Header() {
     <div className="header">
       <div>
         {isHome ? <div className="selected" /> : null}
-
-        <img width={50} src={Logo} alt="Logo do dai pelas" />
+        <img className="logo" width={50} src={Logo} alt="Logo do dai pelas" />
       </div>
       <div>
-        <img className="logo" width={44} src={Logo} alt="Imagem do usuário" />{" "}
+        <img className="avatar" width={44} src={Logo} alt="Imagem do usuário" />
         <img src={ArrowDown} alt="" width={24} />
       </div>
     </div>

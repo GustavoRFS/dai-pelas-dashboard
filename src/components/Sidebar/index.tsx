@@ -8,7 +8,7 @@ import ShitpostIcon from "../../assets/Sidebar/Shitpost.svg";
 import "./Sidebar.scss";
 
 export function Sidebar() {
-  const [selected, setSelected] = useState("Shitposts");
+  const [selected, setSelected] = useState("Home");
   return (
     <div className="sidebar">
       <div>

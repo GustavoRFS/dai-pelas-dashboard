@@ -5,6 +5,7 @@ import "./logged.scss";
 
 type LoggedScreenProps = {
   children: ReactNode;
+  title: string;
 };
 
 export function LoggedScreen(props: LoggedScreenProps) {
@@ -12,7 +13,10 @@ export function LoggedScreen(props: LoggedScreenProps) {
     <div className="home">
       <Sidebar />
       <Header />
-      <div style={{ marginLeft: 80 }}>{props.children}</div>
+      <div className="content">
+        <h1 style={{ marginBottom: 30 }}>{props.title}</h1>
+        <div>{props.children}</div>
+      </div>
     </div>
   );
 }
