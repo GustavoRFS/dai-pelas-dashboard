@@ -1,10 +1,19 @@
 import "./login.scss";
-import { useHistory } from "react-router-dom";
+import { useEffect } from "react";
 import Logo from "../../assets/logo.png";
 import DiscordLogo from "../../assets/discord_logo.svg";
 
 export function Login() {
-  const history = useHistory();
+  useEffect(() => {
+    window.addEventListener("message", () => {
+      window.location.replace("/");
+    });
+
+    return () => {
+      window.removeEventListener("message", () => {});
+    };
+  }, []);
+
   return (
     <div className="login">
       <div>
@@ -12,7 +21,11 @@ export function Login() {
         <h1>Dai Pelas Dashboard</h1>
         <button
           onClick={() => {
-            history.push("/");
+            window.open(
+              "https://discord.com/api/oauth2/authorize?client_id=704278231083122748&redirect_uri=http%3A%2F%2Flocalhost%3A3000%2Fredirect%2F&response_type=token&scope=identify",
+              "Discord OAuth2",
+              "height=600,width=500"
+            );
           }}
         >
           <img src={DiscordLogo} width={34} alt="Logo do Discord" />
