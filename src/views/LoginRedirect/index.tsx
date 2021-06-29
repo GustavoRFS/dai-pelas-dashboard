@@ -1,9 +1,10 @@
 import { useEffect } from "react";
 import cookie from "react-cookies";
+import Logo from "../../assets/logo.png";
+import "./loginRedirect.scss";
 
 export function LoginRedirect() {
   useEffect(() => {
-    console.log(window.opener);
     window.opener!.postMessage("done", "http://localhost:3000/login");
 
     const fragment = new URLSearchParams(window.location.hash.slice(1));
@@ -23,7 +24,11 @@ export function LoginRedirect() {
       maxAge: Number(expiresIn),
     });
 
-    window.close();
+    // window.close();
   });
-  return <div>Redirecionando kkkj</div>;
+  return (
+    <div className="redirect">
+      <img src={Logo} alt="Logo do dai pelas" />
+    </div>
+  );
 }

@@ -1,0 +1,39 @@
+@-webkit-keyframes scale-up-center {
+  0% {
+    -webkit-transform: scale(0.7);
+    transform: scale(0.7);
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+@keyframes scale-up-center {
+  0% {
+    -webkit-transform: scale(0.7);
+    transform: scale(0.7);
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
+.redirect {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+
+  justify-content: center;
+  align-items: center;
+
+  img {
+    width: 250px;
+    max-width: 50vw;
+    -webkit-animation: scale-up-center 1.5s ease-in-out infinite
+      alternate-reverse both;
+    animation: scale-up-center 1.5s ease-in-out infinite alternate-reverse both;
+    transition: width ease-in-out 1000ms;
+    height: fit-content;
+  }
+}

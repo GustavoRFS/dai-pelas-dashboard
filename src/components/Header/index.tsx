@@ -33,6 +33,7 @@ export function Header() {
           }
           alt="Imagem do usuário"
         />
+
         <img src={ArrowDown} alt="" width={24} />
       </div>
     </div>

@@ -1,0 +1,78 @@
+.discord-card {
+  width: 296px;
+  height: 255px;
+
+  position: relative;
+  border-radius: 10px;
+  background-color: #18191c;
+
+  > div {
+    height: 62px;
+    border-radius: 10px;
+    background-size: 100% 100%;
+    #background {
+      border-radius: 10px 10px 0 0;
+      width: 100%;
+      height: 100%;
+      backdrop-filter: blur(12rem);
+    }
+  }
+  > img {
+    position: absolute;
+    top: 20px;
+    left: 14px;
+    background-color: #18191c;
+    padding: 6px;
+    border-radius: 1000px;
+  }
+  > div.content {
+    display: flex;
+    position: absolute;
+    left: 0px;
+    height: 110px;
+    width: 100%;
+    justify-content: space-between;
+
+    flex-direction: column;
+    > h1 {
+      font-size: 20px;
+      margin-left: 20px;
+    }
+    > div#horizontal-line {
+      height: 1px;
+      width: 80%;
+
+      align-self: center;
+      background-color: #ffffff11;
+      float: inline-start;
+    }
+    > button {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #f02d3a;
+      border: 0px;
+      border-radius: 4px;
+      width: fit-content;
+      align-self: center;
+      > img {
+        margin-left: 10px;
+      }
+
+      > h3 {
+        margin: 6px 10px 6px 10px;
+        font-weight: 500;
+        font-size: 16px;
+        text-align: center;
+        text-anchor: middle;
+      }
+    }
+  }
+}
+
+#vertical-line {
+  height: 37px;
+  width: 1px;
+  background-color: #18191c55;
+  margin-left: 10px;
+}

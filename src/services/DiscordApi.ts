@@ -27,3 +27,7 @@ function DiscordApi() {
 export function UserData(): Promise<AxiosResponse<DiscordUser>> {
   return DiscordApi().get("/users/@me");
 }
+
+export function UserDataById(id: string): Promise<AxiosResponse<DiscordUser>> {
+  return DiscordApi().get(`/users/${id}`);
+}

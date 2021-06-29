@@ -1,7 +1,8 @@
 import { BrowserRouter, Route } from "react-router-dom";
 import { Login } from "../views/Login/index";
 import { Home } from "../views/Home/index";
-import { LoginRedirect } from "../views/LoginRedirect";
+import { LoginUnauthorized } from "../views/LoginUnauthorized";
+import { LoginRedirect } from "../views/LoginRedirect/index";
 import { UserContextProvider } from "../contexts/UserContext";
 
 export function Router() {
@@ -14,6 +15,7 @@ export function Router() {
         <Route path="/frases" component={Home} />
         <Route path="/shitposts" component={Home} />
         <Route path="/login" component={Login} />
+        <Route path="/login-unauthorized" component={LoginUnauthorized} />
       </UserContextProvider>
       <Route path="/redirect" component={LoginRedirect} />
     </BrowserRouter>
