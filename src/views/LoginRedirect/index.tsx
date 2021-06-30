@@ -24,7 +24,7 @@ export function LoginRedirect() {
       maxAge: Number(expiresIn),
     });
 
-    // window.close();
+    window.close();
   });
   return (
     <div className="redirect">
