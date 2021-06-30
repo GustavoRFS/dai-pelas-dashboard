@@ -1,0 +1,47 @@
+.login-unauthorized {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(180deg, #121619 59.9%, #574ae2 100%);
+
+  width: 100vw;
+  height: 100vh;
+
+  > div {
+    max-width: 90vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 16px 40px 36px 40px;
+    background-color: #191c1f88;
+    border-radius: 10px;
+
+    > img {
+      margin-bottom: 20px;
+    }
+    > div {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      > p {
+        word-wrap: break-word;
+        padding-right: 10px;
+        width: 400px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 820px) {
+  .login-unauthorized {
+    height: auto;
+    > div > div {
+      flex-direction: column;
+      p {
+        max-width: 80vw;
+        margin-bottom: 40px;
+      }
+    }
+  }
+}
