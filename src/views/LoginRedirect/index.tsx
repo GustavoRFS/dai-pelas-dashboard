@@ -5,8 +5,6 @@ import "./loginRedirect.scss";
 
 export function LoginRedirect() {
   useEffect(() => {
-    window.opener!.postMessage("done", "http://localhost:3000/login");
-
     const fragment = new URLSearchParams(window.location.hash.slice(1));
     const [accessToken, tokenType, expiresIn] = [
       fragment.get("access_token"),
@@ -24,6 +22,7 @@ export function LoginRedirect() {
       maxAge: Number(expiresIn),
     });
 
+    window.opener!.postMessage("done", `${window.location.origin}/login`);
     window.close();
   });
   return (
